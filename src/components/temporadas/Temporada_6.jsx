@@ -4,10 +4,10 @@ import MenuTemporadas from "../MenuTemporadas";
 import Temporada from "./Temporada";
 import TituloPrincipal from "../TituloPrincipal";
 
-const cantidad = vistasTemporadas[5].cantidad;
-const temporada = vistasTemporadas[5].temporada;
+const cantidad = vistasTemporadas[7].cantidad;
+const temporada = vistasTemporadas[7].temporada;
 
-const Temporada_4 = () => {
+const Temporada_6 = () => {
   return (
     <div className="w-full flex flex-col justify-start items-center">
       <div>
@@ -25,7 +25,7 @@ const Temporada_4 = () => {
         <div className="w-10/12 flex flex-row justify-center items-center mb-28">
           <hr className="w-11/12" />
         </div>
-        {temporadas.temp_04.map((temporada, i) => {
+        {temporadas.temp_06.map((temporada, i) => {
           return (
             <Temporada
               key={i}
@@ -42,4 +42,4 @@ const Temporada_4 = () => {
   );
 };
 
-export default Temporada_4;
+export default Temporada_6;

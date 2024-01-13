@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { portadas } from "../data/ImagenesPortada";
 import { vistasTemporadas } from "../data/TemporadasData";
 import MenuTemporadas from "./MenuTemporadas";
+import TituloPrincipal from "./TituloPrincipal";
 
 const MenuPrincipal = () => {
   return (
@@ -16,14 +17,10 @@ const MenuPrincipal = () => {
         })}
       </div>
       <div className="z-10 absolute w-8/12 max-h-full md:mt-52 sm:mt-28  bg-black/40 hover:bg-black/70 transition-all duration-700 ease-in-out mb-20 flex justify-start items-center flex-col">
-        <Link to={"/"}>
-        <p className="bebas-neue-regular md:mt-16 sm:mt-10 md:mb-16 sm:mb-10 md:text-6xl sm:text-3xl">
-          Las aventuras de arsene lupin III
-        </p>
-        </Link>
+        <TituloPrincipal />
         <MenuTemporadas temporada={""} cantidad={""} />
         <div className="w-10/12 flex flex-row justify-center items-center md:mb-28 sm:mb-10">
-          <hr className="w-11/12"/>
+          <hr className="w-11/12" />
         </div>
         {vistasTemporadas.map((vista, i) => {
           return (
@@ -36,9 +33,14 @@ const MenuPrincipal = () => {
                 <p className="bg-black/55 md:px-4 sm:px-2 md:text-5xl sm:text-xl md:pt-2 sm:pt-1 md:pb-4 sm:pb-2 rounded-lg md:mb-10 sm:mb-3 font-extrabold">
                   {vista.temporada}
                 </p>
-                <p className="md:mb-10 sm:mb-3 md:text-5xl sm:text-xl font-bold">{vista.titulo}</p>
+                <p className="md:mb-10 sm:mb-3 md:text-5xl sm:text-xl font-bold">
+                  {vista.titulo}
+                </p>
                 <p className="md:text-3xl sm:text-base">
-                  <span className="bgyellow text-black px-2 rounded-md">{vista.cantidad}</span> Episodios
+                  <span className="bgyellow text-black px-2 rounded-md">
+                    {vista.cantidad}
+                  </span>{" "}
+                  Episodios
                 </p>
               </div>
               <div className="md:w-80 sm:w-40">

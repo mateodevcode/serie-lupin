@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
 import { portadas } from "../../data/ImagenesPortada";
 import { temporadas, vistasTemporadas } from "../../data/TemporadasData";
 import MenuTemporadas from "../MenuTemporadas";
 import Temporada from "./Temporada";
-import TituloPrincipal from "../TituloPrincipal";
 
-const cantidad = vistasTemporadas[5].cantidad;
-const temporada = vistasTemporadas[5].temporada;
+const cantidad = vistasTemporadas[8].cantidad;
+const temporada = vistasTemporadas[8].temporada;
 
-const Temporada_4 = () => {
+const FujikoMine = () => {
   return (
     <div className="w-full flex flex-col justify-start items-center">
       <div>
@@ -20,12 +20,16 @@ const Temporada_4 = () => {
         })}
       </div>
       <div className="z-10 absolute w-8/12 h-full md:mt-52 sm:mt-28  bg-black/40 hover:bg-black/70 transition-all duration-700 ease-in-out mb-20 flex justify-start items-center flex-col">
-        <TituloPrincipal />
+        <Link to={"/"}>
+          <p className="bebas-neue-regular md:mt-16 sm:mt-10 md:mb-16 sm:mb-10 md:text-6xl sm:text-3xl">
+            Las aventuras de arsene lupin III
+          </p>
+        </Link>
         <MenuTemporadas temporada={temporada} cantidad={cantidad} />
         <div className="w-10/12 flex flex-row justify-center items-center mb-28">
           <hr className="w-11/12" />
         </div>
-        {temporadas.temp_04.map((temporada, i) => {
+        {temporadas.fujiko_mine.map((temporada, i) => {
           return (
             <Temporada
               key={i}
@@ -42,4 +46,4 @@ const Temporada_4 = () => {
   );
 };
 
-export default Temporada_4;
+export default FujikoMine;

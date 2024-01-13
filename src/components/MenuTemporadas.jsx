@@ -78,6 +78,20 @@ const MenuTemporadas = ({ temporada, cantidad }) => {
                   >
                     <Link to={"/temporada-5"}>Temporada 5</Link>
                   </MenuItem>
+                  <MenuItem
+                    color={"white"}
+                    _hover={{ bg: "rgba(255,255,255, 0.2)", color: "white" }}
+                    bg={"rgba(0,0,0, 0.1)"}
+                  >
+                    <Link to={"/temporada-6"}>Temporada 6</Link>
+                  </MenuItem>
+                  <MenuItem
+                    color={"white"}
+                    _hover={{ bg: "rgba(255,255,255, 0.2)", color: "white" }}
+                    bg={"rgba(0,0,0, 0.1)"}
+                  >
+                    <Link to={"/fujiko-mine"}>Fujiko Mine</Link>
+                  </MenuItem>
                 </MenuList>
               </>
             }
