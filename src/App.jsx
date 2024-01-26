@@ -10,7 +10,7 @@ import FujikoMine from "./components/temporadas/FujikoMine";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="serie-lupin">
       <Routes>
         <Route path="/" element={<HomePage />}/>
 
